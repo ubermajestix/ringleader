@@ -11,6 +11,7 @@ admin:
   command: "bundle exec foreman start"
   server_port: 3001
   app_port: 4001
+  enable_logging: false
   env:
     OVERRIDE: true
 authentication:

@@ -128,7 +128,13 @@ module Ringleader
         )
       end
       slave.close
-      proxy_output @master
+
+      if config.enable_logging
+        proxy_output @master
+      else
+        info "ringleader unified logging disabled"
+      end
+      
       debug "started with pid #{@pid}"
 
       @wait_for_exit = WaitForExit.new @pid, Actor.current

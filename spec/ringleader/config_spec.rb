@@ -49,6 +49,11 @@ describe Ringleader::Config do
       it "sets 'INT' as the default kill signal" do
         expect(subject.apps["main_site"].kill_with).to eq("INT")
       end
+
+      it "sets enable_logging to true by default" do
+        expect(subject.apps["main_site"].enable_logging).to eq(true)
+        expect(subject.apps["admin"].enable_logging).to eq(false)
+      end
     end
   end
 

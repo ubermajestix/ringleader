@@ -40,6 +40,7 @@ module Ringleader
         options["startup_timeout"] ||= DEFAULT_STARTUP_TIMEOUT
         options["kill_with"] ||= "INT"
         options["env"] ||= {}
+        options["enable_logging"] = options.fetch("enable_logging", true)
 
         options["dir"] = File.expand_path options["dir"]
         unless File.directory?(options["dir"]) || options["disabled"]

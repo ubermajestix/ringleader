@@ -110,6 +110,8 @@ something like this:
                                # TERM or KILL if the default is leaving zombies.
       run_on_load: false       # Set this to true to start an app when ringleader
                                # loads.
+      enable_logging: true     # Set this to false to disable ringleader's
+                               # unified logging
 
       # If you have an application managed by rvm, this setting automatically
       # adds the rvm-specific shell setup before executing the given command.
